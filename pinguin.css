@@ -1,0 +1,343 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(205, 218, 224);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 100%;
+    z-index: -3;
+    overflow: hidden;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 255px;
+  height: 450px;
+/*   background-color: rgba(0, 0, 0, 0.15); */
+  border-radius: 100% 100% 41% 46% / 100% 100% 100% 100%;
+  position: relative;
+}
+
+.body::before {
+  content: "";
+  position: absolute;
+  width: 190px;
+  height: 210px;
+  border-radius: 100%;
+  background-color: rgb(59, 59, 59);
+  top: 25px;
+  left: 30px;
+}
+
+.body::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 310px;
+  border-radius: 100%;
+  background-color: rgb(59, 59, 59);
+  top: 135px;
+  left: 0px;
+  z-index: -1;
+}
+
+.white-space {
+  width: 200px;
+  height: 250px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 30% 30% 50% 50% / 47% 47% 58% 65%;
+  margin-top: 150px;
+  position: relative;
+  box-shadow: inset -15px 0px 0 0 rgba(0, 0, 0, 0.15);
+}
+
+.white-space::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 120px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 87% 100% 0% 80% / 100% 100% 53% 80%;
+  margin-top: 140px;
+  top: -250px;
+  left: 30px;
+}
+
+.white-space::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 120px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 87% 100% 0% 80% / 100% 100% 53% 80%;
+  margin-top: 140px;
+  top: -250px;
+  left: 90px;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  box-shadow: inset 7px 0px 0 0 rgba(0, 0, 0, 0.15);
+}
+
+.left-arm {
+  width: 40px;
+  height: 140px;
+  background-color: rgb(59, 59, 59);
+  border-radius: 100%;
+  position: absolute;
+  top: 220px;
+  left: 10px;
+  transform: rotate(45deg);
+  z-index: -1;
+  transform-origin: top right;
+  animation: byebyeright 1s infinite alternate;
+}
+
+@keyframes byebyeright {
+  from {
+    transform: rotate(45deg);
+  }
+
+  to {
+    transform: rotate(60deg);
+  }
+}
+
+.right-arm {
+  width: 40px;
+  height: 140px;
+  background-color: rgb(59, 59, 59);
+  border-radius: 100%;
+  transform: rotate(315deg);
+  position: absolute;
+  top: 220px;
+  left: 200px;
+  z-index: -1;
+  animation: byebyeleft 1s infinite alternate;
+  transform-origin: top left;
+}
+
+@keyframes byebyeleft {
+  from {
+    transform: rotate(315deg);
+  }
+
+  to {
+    transform: rotate(300deg);
+  }
+}
+
+.right-foot {
+  width: 70px;
+  height: 30px;
+  background-color: #b39136;
+  border-radius: 44% 100% 100% 38% / 100% 100% 83% 100%;
+  position: absolute;
+  top: 430px;
+  left: 50px;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  box-shadow: inset 10px 0px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset -15px 0px 0 0 rgba(0, 0, 0, 0.15);
+    
+}
+
+.left-foot {
+  width: 70px;
+  height: 30px;
+  background-color: #b39136;
+  border-radius: 44% 100% 100% 38% / 100% 100% 83% 100%;
+  position: absolute;
+  top: 430px;
+  left: 140px;
+  box-shadow: inset -15px 0px 0 0 rgba(0, 0, 0, 0.15);
+    
+}
+
+.right-eye {
+  width: 22px;
+  height: 30px;
+  border: solid 3px rgba(39, 39, 39, 0.2);
+  background-color: rgb(240, 240, 240);
+  border-radius: 50px;
+  position: absolute;
+  top: -90px;
+  left: 60px;
+  overflow: hidden;
+}
+
+.right-pupil {
+  width: 22px;
+  height: 30px;
+  background-color: rgb(75, 75, 75);
+  border-radius: 100px;
+  margin-left: 3px;
+  margin-top: 8px;
+}
+
+.right-bright {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 100%;
+}
+
+.left-eye {
+  width: 22px;
+  height: 30px;
+  border: solid 3px rgba(39, 39, 39, 0.2);
+  background-color: rgb(240, 240, 240);
+  border-radius: 50px;
+  position: absolute;
+  top: -90px;
+  left: 110px;
+  z-index: +1;
+  overflow: hidden;
+}
+
+.left-pupil {
+  width: 22px;
+  height: 30px;
+  background-color: rgb(75, 75, 75);
+  border-radius: 100px;
+  margin-left: 3px;
+  margin-top: 8px;
+}
+
+.left-bright {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(255, 255, 255);
+
+  border-radius: 100%;
+}
+
+.mounth {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(126, 100, 79);
+  animation-name: example ;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  border-radius: 0.5px 1px 0.5px 5px;
+  position: relative;
+  top: -68px;
+  left: 73px;
+  z-index: +1;
+  clip-path: circle(95.3% at 0 100%);
+  transform: rotate(315deg);
+  box-shadow: inset -15px 0px 0 0 rgba(0, 0, 0, 0.15);
+  
+}
+@keyframes example{
+  5%{background-color: hsl(44, 29%, 41%);}
+  50%{background-color: rgb(199, 177, 52);}
+  100%{background-color:#b39136;}
+  75% {background-color: #698000;}
+  20%{background-color: #a8ce1e;}
+  
+}
+
+.butterfly1 {
+  width: 40px;
+  height: 50px;
+  background-color: black;
+  /*animation-name: example ;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;*/
+  border-radius: -3.0px 0.5px 3.0px 0px;
+  position: relative;
+  top: -65px;
+  left: 76px;
+  z-index: +1;
+  clip-path: circle(65.3% at 0 100%);
+  transform: rotate(315deg);
+  box-shadow: inset -15px 0px 0 0 rgba(0, 0, 0, 0.15);
+}
+
+.butterfly2 {
+  width: 40px;
+  height: 50px;
+  background-color: black;
+  /*animation-name: example ;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;*/
+  border-radius: -3.0px 0.5px 3.0px 0px;
+  position: relative;
+  top: -65px;
+  left: 76px;
+  z-index: +1;
+  clip-path: circle(55.3% at 0 100%);
+  transform: rotate(315deg);
+  box-shadow: inset -15px 0px 0 0 rgba(0, 0, 0, 0.15);
+}
+.butterfly3 {
+  width: 40px;
+  height: 50px;
+  background-color: black;
+  /*animation-name: example ;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;*/
+  border-radius: -3.0px 0.5px 3.0px 0px;
+  position: relative;
+  top: -65px;
+  left: 76px;
+  z-index: +1;
+  clip-path: circle(45.3% at 0 100%);
+  transform: rotate(315deg);
+  box-shadow: inset -15px 0px 0 0 rgba(0, 0, 0, 0.15);
+}
+.butterfly4 {
+  width: 40px;
+  height: 50px;
+  background-color: black;
+  /*animation-name: example ;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;*/
+  border-radius: 3.0px 0.5px 3.0px 0px;
+  position: relative;
+  top: -65px;
+  left: 76px;
+  z-index: +1;
+  clip-path: circle(35.3% at 0 100%);
+  transform: rotate(315deg);
+  box-shadow: inset -15px 0px 0 0 rgba(0, 0, 0, 0.15);
+}
+.butterfly5 {
+  width: 40px;
+  height: 50px;
+  background-color: black;
+  /*animation-name: example ;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;*/
+  border-radius: -3.0px 0.5px 3.0px 0px;
+  position: relative;
+  top: -75px;
+  left: 76px;
+  z-index: +1;
+  clip-path: circle(25.3% at 0 100%);
+  transform: rotate(315deg);
+  box-shadow: inset -15px 0px 0 0 rgba(0, 0, 0, 0.15);
+}
+
